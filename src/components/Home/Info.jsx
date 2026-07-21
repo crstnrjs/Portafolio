@@ -57,7 +57,7 @@ const Info = ({id}) => {
           <p className='text-white text-lg w-[80%]'>Analista Programador especializado en Desarrollo Web, Bases de Datos SQL y soluciones digitales escalables. Radicado en Chile, construyendo para el mundo.</p>
         </div>
         <div className=' mt-15 mb-15'>
-          <a className="bg-blue-500 text-white py-3 px-10 rounded font-mono mr-5 text-center">
+          <a className="bg-blue-500 hover:bg-blue-800 transition-colors text-white py-3 px-10 rounded font-mono mr-5 text-center">
             Ver Proyectos
           </a>
           <a className="bg-gray-800/30 text-white py-3 px-10 rounded border-[0.1px] border-white/30 hover:border-white hover:bg-gray-800/60 font-mono text-center">

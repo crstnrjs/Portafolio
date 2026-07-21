@@ -6,6 +6,7 @@ import heroImg from './assets/hero.png'
 import Header from './components/Header/header'
 import Info from './components/Home/Info'
 import AboutMe from './components/Home/AboutMe'
+import Contact from './components/Home/Contact'
 import './App.css'
 
 const styles = {
@@ -24,6 +25,7 @@ function App() {
       <div className=''>
         <Info id="info"/>
         <AboutMe id="about"/>
+        <Contact id="contact"/>
       </div>
     </div>      
     </>
