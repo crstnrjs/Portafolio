@@ -4,7 +4,10 @@ import { AcademicCapIcon, CodeBracketIcon, PencilIcon, MagnifyingGlassIcon, User
 const AboutMe = ({id}) => {
     return (
         <div id={id} className='mt-30 mb-20'>
-            <div className='w-[60%] mx-auto'>
+            <div className='w-[60%] mx-auto justify-center items-center flex flex-col'>
+                <span className="text-xs leading-5 text-blue-400 rounded-xl bg-blue-500/20 border p-2 whitespace-nowrap mb-10">
+                    Acerca de mí
+                </span>
                 <h2 className='mx-auto text-center text-5xl font-extrabold text-white font-display'>Más que un desarrollador — un artesano digital</h2>
                 <p className='text-white text-center mt-5 w-[80%] mx-auto'>Aporto tanto profundidad técnica como visión de negocio a cada proyecto, asegurando que lo que se construye no solo funcione bien, sino que entregue un valor genuino.</p>
             </div>

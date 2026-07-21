@@ -7,6 +7,9 @@ const Contact = ({ id }) => {
   return (
     <div id={id} className='flex flex-col justify-center items-center h-full gap-5' >
       <div className='w-[60%] mx-auto mt-30 mb-20 flex flex-col justify-center items-center'>
+        <span className="text-xs leading-5 text-blue-400 rounded-xl bg-blue-500/20 border p-2 whitespace-nowrap mb-10">
+          Contacto
+        </span>
         <h1 className="font-extrabold text-center text-5xl text-white mb-10" >
           Construyamos algo grande
         </h1>

@@ -7,6 +7,7 @@ import Header from './components/Header/header'
 import Info from './components/Home/Info'
 import AboutMe from './components/Home/AboutMe'
 import Contact from './components/Home/Contact'
+import Experience from './components/Home/Experience'
 import './App.css'
 
 const styles = {
@@ -25,6 +26,7 @@ function App() {
       <div className=''>
         <Info id="info"/>
         <AboutMe id="about"/>
+        <Experience id="experience"/>
         <Contact id="contact"/>
       </div>
     </div>      
