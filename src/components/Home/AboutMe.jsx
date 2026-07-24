@@ -12,7 +12,7 @@ const AboutMe = ({id}) => {
                 <p className='text-white text-center mt-5 w-[80%] mx-auto'>Aporto tanto profundidad técnica como visión de negocio a cada proyecto, asegurando que lo que se construye no solo funcione bien, sino que entregue un valor genuino.</p>
             </div>
             <div>
-                <div class="grid lg:grid-cols-3 gap-4 w-[80%] mx-auto mt-15 ">
+                <div className="grid lg:grid-cols-3 gap-4 w-[80%] mx-auto mt-15 ">
                     <div className="lg:col-span-2 text-white flex flex-row items-start rounded-md border-slate-500/50 border-[0.1px] bg-gray-700/40 p-5 gap-5">
                         <div className='bg-blue-900/20 rounded-md border-slate-500/50 border-[0.1px] flex items-center justify-center p-2'>
                             <AcademicCapIcon className="w-7 h-7 text-blue-bright" />
