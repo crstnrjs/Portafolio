@@ -25,6 +25,7 @@ const Contact = ({ id }) => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           access_key: '02c0d074-49a5-40e6-86fb-e988c8f923b3',
+          from_name: 'Portafolio Christian Rojas',
           name: formData.name,
           email: formData.email,
           subject: formData.subject,
