@@ -22,7 +22,7 @@ const AboutMe = ({id}) => {
                             <p className='text-gray-400 text-[13px]'>Analista Programador especializado en desarrollo web con PHP y bases de datos MySQL, con experiencia práctica en WordPress y proyectos reales de e-commerce. Combino atención al detalle con capacidad de resolución de problemas para transformar requerimientos de negocio en soluciones funcionales y escalables.</p>
                         </div>
                     </div>
-                    <div class="text-white flex flex-row items-start rounded-md border-slate-500/50 border-[0.1px] bg-gray-700/40 p-5 gap-5">
+                    <div className="text-white flex flex-row items-start rounded-md border-slate-500/50 border-[0.1px] bg-gray-700/40 p-5 gap-5">
                         <div className='bg-blue-900/20 rounded-md border-slate-500/50 border-[0.1px] flex items-center justify-center p-2'>
                             <CodeBracketIcon className="w-7 h-7 text-blue-bright" />
                         </div>
@@ -31,7 +31,7 @@ const AboutMe = ({id}) => {
                             <p className='text-gray-400 text-[13px]'>El desarrollo de software no es solo mi profesión — es mi oficio. Me motiva el desafío de convertir ideas abstractas en productos funcionales, y me enorgullece escribir código limpio y mantenible que resista el paso del tiempo.</p>
                         </div>
                     </div>
-                    <div class="text-white flex flex-row items-start rounded-md border-slate-500/50 border-[0.1px] bg-gray-700/40 p-5 gap-5">
+                    <div className="text-white flex flex-row items-start rounded-md border-slate-500/50 border-[0.1px] bg-gray-700/40 p-5 gap-5">
                         <div className='bg-blue-900/20 rounded-md border-slate-500/50 border-[0.1px] flex items-center justify-center p-2'>
                             <PencilIcon className="w-7 h-7 text-blue-bright" />
                         </div>
@@ -40,7 +40,7 @@ const AboutMe = ({id}) => {
                             <p className='text-gray-400 text-[13px]'>El panorama tecnológico evoluciona rápido, y me comprometo a evolucionar junto a él. Actualmente estoy ampliando mis conocimientos en React y React Native, sumando nuevas herramientas a mi base en PHP y desarrollo web. Para mí, aprender no es una etapa, es parte constante del oficio.</p>
                         </div>
                     </div>
-                    <div class="text-white flex flex-row items-start rounded-md border-slate-500/50 border-[0.1px] bg-gray-700/40 p-5 gap-5">
+                    <div className="text-white flex flex-row items-start rounded-md border-slate-500/50 border-[0.1px] bg-gray-700/40 p-5 gap-5">
                         <div className='bg-blue-900/20 rounded-md border-slate-500/50 border-[0.1px] flex items-center justify-center p-2'>
                             <MagnifyingGlassIcon className="w-7 h-7 text-blue-bright" />
                         </div>
@@ -49,7 +49,7 @@ const AboutMe = ({id}) => {
                             <p className='text-gray-400 text-[13px]'>Abordo cada desafío de forma analítica: descompongo problemas complejos en partes manejables, evalúo distintas alternativas de solución, y busco entregar resultados que sean sólidos técnicamente y viables en la práctica.</p>
                         </div>
                     </div>
-                    <div class="text-white flex flex-row items-start rounded-md border-slate-500/50 border-[0.1px] bg-gray-700/40 p-5 gap-5">
+                    <div className="text-white flex flex-row items-start rounded-md border-slate-500/50 border-[0.1px] bg-gray-700/40 p-5 gap-5">
                         <div className='bg-blue-900/20 rounded-md border-slate-500/50 border-[0.1px] flex items-center justify-center p-2'>
                             <UserGroupIcon className="w-7 h-7 text-blue-bright" />
                         </div>
