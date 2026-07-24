@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const Contact = ({ id }) => {
   return (
-    <div id={id} className='flex flex-col justify-center items-center h-full gap-5' >
+    <div id={id} className='flex flex-col justify-center items-center h-full gap-5 mb-100' >
       <div className='w-[60%] mx-auto mt-30 mb-20 flex flex-col justify-center items-center'>
         <span className="text-xs leading-5 text-blue-400 rounded-xl bg-blue-500/20 border p-2 whitespace-nowrap mb-10">
           Contacto
@@ -17,7 +17,7 @@ const Contact = ({ id }) => {
           ¿Tienes un proyecto en mente o solo quieres saludar? Siempre estoy abierto a conversar sobre nuevas oportunidades, desafíos técnicos o colaboraciones.
         </h3>
       </div>
-      <div className='w-[90%] mx-auto mb-20 flex flex-row gap-6'>
+      <div className='w-[90%] mx-auto mb-20 flex flex-col md:flex-row gap-6'>
         {/* COLUMNA IZQUIERDA - Info de contacto */}
         <div className='flex flex-col gap-4 w-full flex-1'>
           <div className='flex flex-col rounded-2xl p-7 bg-gray-700/40 border-slate-500/50 border-[0.1px] gap-2 w-full'>
@@ -57,9 +57,9 @@ const Contact = ({ id }) => {
         </div>
 
         {/* COLUMNA DERECHA - Formulario */}
-        <div className='flex flex-col gap-4 rounded-2xl p-10 bg-gray-700/40 border-slate-500/50 border-[0.1px] w-0 flex-1'>
+        <div className='flex flex-col gap-4 rounded-2xl p-10 bg-gray-700/40 border-slate-500/50 border-[0.1px] flex-1'>
           <form className='flex flex-col gap-4'>
-            <div className='flex flex-row justify-between'>
+            <div className='flex flex-col md:flex-row justify-between'>
               <div className='flex flex-col flex-1 mr-2'>
                 <p className="text-gray-300">Nombre</p>
                 <input type="text" placeholder='Nombre' className='p-3 rounded-md bg-gray-700/40 text-white border-slate-500/50 border-[0.1px]' />

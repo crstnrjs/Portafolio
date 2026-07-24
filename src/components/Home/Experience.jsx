@@ -5,7 +5,7 @@ const Experience = ({ id }) => {
     const [open, setOpen] = useState(true)
 
     return (
-        <div id={id} className='flex flex-col justify-center items-center h-full gap-5 w-[60%] mx-auto'>
+        <div id={id} className='flex flex-col justify-center items-center h-full gap-5 lg:w-[60%] w-[90%] mx-auto'>
             <div className='mx-auto mt-30 mb-20 flex flex-col justify-center items-center'>
                 <span className="text-xs leading-5 text-blue-400 rounded-xl bg-blue-500/20 border p-2 whitespace-nowrap mb-10">
                     Experiencia Profesional

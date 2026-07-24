@@ -46,12 +46,16 @@ const Info = ({id}) => {
   ];
 
   return (
-    <div id={id} className='justify-center items-center pt-30 pl-10 pr-10 flex flex-row w-[90%] mx-auto'>
+    <div 
+      id={id} 
+      className='
+      justify-center items-center pt-30 pl-10 pr-10 flex flex-col w-[95%] mx-auto
+      lg:flex-row lg:gap-10 lg:justify-between lg:items-start'>
       {/*PRESENTACION, NOMBRE*/}
       <div className='flex flex-col flex-2'>
         <div className=''>
-          <h1 className='text-7xl font-bold text-white'>CHRISTIAN ANDRES ROJAS RODRIGO</h1>
-          <h2 className='text-5xl font-bold text-blue-bright'>ANALISTA PROGRAMADOR COMPUTACIONAL</h2>
+          <h1 className='text-3xl lg:text-7xl font-bold text-white'>CHRISTIAN ANDRES ROJAS RODRIGO</h1>
+          <h2 className='text-2xl lg:text-5xl font-bold text-blue-bright'>ANALISTA PROGRAMADOR COMPUTACIONAL</h2>
         </div>
         <div className='mt-10'>
           <p className='text-white text-lg w-[80%]'>Analista Programador especializado en Desarrollo Web, Bases de Datos SQL y soluciones digitales escalables. Radicado en Chile, construyendo para el mundo.</p>
@@ -67,7 +71,7 @@ const Info = ({id}) => {
       </div>
       {/*SKILLS*/}
       <div className='w-auto mx-auto'>
-        <div className='bg-sky-950/25 border-slate-500/30 border-[0.1px] p-4 flex-1 rounded-xl h-full w-[80%] mx-auto'>
+        <div className='bg-sky-950/25 border-slate-500/30 border-[0.1px] p-4 flex-1 rounded-xl h-full mx-auto'>
           <div className='flex flex-row justify-between'>
             <p className='text-white font-bold'>Habilidades</p>
             <p className='text-gray-300 text-xs'>2026</p>

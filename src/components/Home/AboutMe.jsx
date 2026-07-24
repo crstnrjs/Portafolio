@@ -8,12 +8,12 @@ const AboutMe = ({id}) => {
                 <span className="text-xs leading-5 text-blue-400 rounded-xl bg-blue-500/20 border p-2 whitespace-nowrap mb-10">
                     Acerca de mí
                 </span>
-                <h2 className='mx-auto text-center text-5xl font-extrabold text-white font-display'>Más que un desarrollador — un artesano digital</h2>
+                <h2 className='mx-auto text-center text-3xl font-extrabold text-white font-display'>Más que un desarrollador — un artesano digital</h2>
                 <p className='text-white text-center mt-5 w-[80%] mx-auto'>Aporto tanto profundidad técnica como visión de negocio a cada proyecto, asegurando que lo que se construye no solo funcione bien, sino que entregue un valor genuino.</p>
             </div>
             <div>
-                <div class="grid grid-cols-3 gap-4 w-[80%] mx-auto mt-15 ">
-                    <div className="col-span-2 text-white flex flex-row items-start rounded-md border-slate-500/50 border-[0.1px] bg-gray-700/40 p-5 gap-5">
+                <div class="grid lg:grid-cols-3 gap-4 w-[80%] mx-auto mt-15 ">
+                    <div className="lg:col-span-2 text-white flex flex-row items-start rounded-md border-slate-500/50 border-[0.1px] bg-gray-700/40 p-5 gap-5">
                         <div className='bg-blue-900/20 rounded-md border-slate-500/50 border-[0.1px] flex items-center justify-center p-2'>
                             <AcademicCapIcon className="w-7 h-7 text-blue-bright" />
                         </div>
