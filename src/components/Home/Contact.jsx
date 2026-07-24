@@ -1,11 +1,52 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { PaperAirplaneIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
-
 const Contact = ({ id }) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  })
+  const [status, setStatus] = useState('idle') // idle | sending | success | error
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setStatus('sending')
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: '02c0d074-49a5-40e6-86fb-e988c8f923b3',
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        })
+      })
+
+      const result = await res.json()
+
+      if (result.success) {
+        setStatus('success')
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } else {
+        setStatus('error')
+      }
+    } catch (err) {
+      setStatus('error')
+    }
+  }
+
   return (
-    <div id={id} className='flex flex-col justify-center items-center h-full gap-5 mb-100' >
+    <div id={id} className='flex flex-col justify-center items-center h-full gap-5 mb-100'>
       <div className='w-[60%] mx-auto mt-30 mb-20 flex flex-col justify-center items-center'>
         <span className="text-xs leading-5 text-blue-400 rounded-xl bg-blue-500/20 border p-2 whitespace-nowrap mb-10">
           Contacto
@@ -58,28 +99,71 @@ const Contact = ({ id }) => {
 
         {/* COLUMNA DERECHA - Formulario */}
         <div className='flex flex-col gap-4 rounded-2xl p-10 bg-gray-700/40 border-slate-500/50 border-[0.1px] flex-1'>
-          <form className='flex flex-col gap-4'>
+          <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
             <div className='flex flex-col md:flex-row justify-between'>
               <div className='flex flex-col flex-1 mr-2'>
                 <p className="text-gray-300">Nombre</p>
-                <input type="text" placeholder='Nombre' className='p-3 rounded-md bg-gray-700/40 text-white border-slate-500/50 border-[0.1px]' />
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  placeholder='Nombre'
+                  className='p-3 rounded-md bg-gray-700/40 text-white border-slate-500/50 border-[0.1px]'
+                />
               </div>
               <div className='flex flex-col flex-1'>
                 <p className="text-gray-300">Email</p>
-                <input type="email" placeholder='tu@email.com' className='p-3 rounded-md bg-gray-700/40 text-white border-slate-500/50 border-[0.1px]' />
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  placeholder='tu@email.com'
+                  className='p-3 rounded-md bg-gray-700/40 text-white border-slate-500/50 border-[0.1px]'
+                />
               </div>
             </div>
             <div className='flex flex-col'>
               <p className="text-gray-300">Asunto</p>
-              <input type="text" placeholder='De que se trata esto?' className='p-3 rounded-md bg-gray-700/40 text-white border-slate-500/50 border-[0.1px]' />
+              <input
+                type="text"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                required
+                placeholder='De que se trata esto?'
+                className='p-3 rounded-md bg-gray-700/40 text-white border-slate-500/50 border-[0.1px]'
+              />
             </div>
             <div className='flex flex-col'>
               <p className="text-gray-300">Mensaje</p>
-              <textarea placeholder='Cuéntame sobre tu proyecto, plazos y presupuesto' className='p-3 rounded-md bg-gray-700/40 text-white border-slate-500/50 border-[0.1px]' />
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                placeholder='Cuéntame sobre tu proyecto, plazos y presupuesto'
+                className='p-3 rounded-md bg-gray-700/40 text-white border-slate-500/50 border-[0.1px]'
+              />
             </div>
-            <button type="submit" className='w-[80%] mx-auto bg-blue-500 hover:bg-blue-800 transition-colors text-white text-center p-3 rounded-md flex flex-row justify-center'>
-              Enviar mensaje <PaperAirplaneIcon className="justify-center h-5 w-5 ml-5" />
+            <button
+              type="submit"
+              disabled={status === 'sending'}
+              className='w-[80%] mx-auto bg-blue-500 hover:bg-blue-800 transition-colors text-white text-center p-3 rounded-md flex flex-row justify-center disabled:opacity-50'
+            >
+              {status === 'sending' ? 'Enviando...' : 'Enviar mensaje'}
+              <PaperAirplaneIcon className="justify-center h-5 w-5 ml-5" />
             </button>
+
+            {status === 'success' && (
+              <p className="text-green-400 text-center text-sm">¡Mensaje enviado! Te responderé pronto.</p>
+            )}
+            {status === 'error' && (
+              <p className="text-red-400 text-center text-sm">Hubo un error, intenta de nuevo o escríbeme directo al correo.</p>
+            )}
           </form>
         </div>
       </div>
