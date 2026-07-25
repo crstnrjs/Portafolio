@@ -10,7 +10,7 @@ const Info = ({id}) => {
     { name: "CSS3" },
     { name: "JavaScript" },
     { name: "TypeScript" },
-    { name: "Ract" },
+    { name: "React" },
     { name: "Tailwind CSS" },
   ];
 
