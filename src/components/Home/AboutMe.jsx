@@ -1,66 +1,60 @@
-import React from 'react'
-import { AcademicCapIcon, CodeBracketIcon, PencilIcon, MagnifyingGlassIcon, UserGroupIcon } from '@heroicons/react/24/outline'
+import { CodeBracketIcon, PencilIcon, MagnifyingGlassIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
-const AboutMe = ({id}) => {
-    return (
-        <div id={id} className='mt-30 mb-20'>
-            <div className='w-[60%] mx-auto justify-center items-center flex flex-col'>
-                <span className="text-xs leading-5 text-blue-400 rounded-xl bg-blue-500/20 border p-2 whitespace-nowrap mb-10">
-                    Acerca de mí
-                </span>
-                <h2 className='mx-auto text-center text-3xl font-extrabold text-white font-display'>Más que un desarrollador — un artesano digital</h2>
-                <p className='text-white text-center mt-5 w-[80%] mx-auto'>Aporto tanto profundidad técnica como visión de negocio a cada proyecto, asegurando que lo que se construye no solo funcione bien, sino que entregue un valor genuino.</p>
-            </div>
-            <div>
-                <div className="grid lg:grid-cols-3 gap-4 w-[80%] mx-auto mt-15 ">
-                    <div className="lg:col-span-2 text-white flex flex-row items-start rounded-md border-slate-500/50 border-[0.1px] bg-gray-700/40 p-5 gap-5">
-                        <div className='bg-blue-900/20 rounded-md border-slate-500/50 border-[0.1px] flex items-center justify-center p-2'>
-                            <AcademicCapIcon className="w-7 h-7 text-blue-bright" />
-                        </div>
-                        <div className='flex flex-col w-full'>
-                            <h1 className='font-bold text-sm'> RESUMEN PROFESIONAL </h1>
-                            <p className='text-gray-400 text-[13px]'>Analista Programador especializado en desarrollo web con PHP y bases de datos MySQL, con experiencia práctica en WordPress y proyectos reales de e-commerce. Combino atención al detalle con capacidad de resolución de problemas para transformar requerimientos de negocio en soluciones funcionales y escalables.</p>
-                        </div>
-                    </div>
-                    <div className="text-white flex flex-row items-start rounded-md border-slate-500/50 border-[0.1px] bg-gray-700/40 p-5 gap-5">
-                        <div className='bg-blue-900/20 rounded-md border-slate-500/50 border-[0.1px] flex items-center justify-center p-2'>
-                            <CodeBracketIcon className="w-7 h-7 text-blue-bright" />
-                        </div>
-                        <div className='flex flex-col w-full'>
-                            <h1 className='font-bold text-sm'> PASIÓN POR EL DESARROLLO </h1>
-                            <p className='text-gray-400 text-[13px]'>El desarrollo de software no es solo mi profesión — es mi oficio. Me motiva el desafío de convertir ideas abstractas en productos funcionales, y me enorgullece escribir código limpio y mantenible que resista el paso del tiempo.</p>
-                        </div>
-                    </div>
-                    <div className="text-white flex flex-row items-start rounded-md border-slate-500/50 border-[0.1px] bg-gray-700/40 p-5 gap-5">
-                        <div className='bg-blue-900/20 rounded-md border-slate-500/50 border-[0.1px] flex items-center justify-center p-2'>
-                            <PencilIcon className="w-7 h-7 text-blue-bright" />
-                        </div>
-                        <div className='flex flex-col w-full'>
-                            <h1 className='font-bold text-sm'> APRENDIZAJE CONTINUO </h1>
-                            <p className='text-gray-400 text-[13px]'>El panorama tecnológico evoluciona rápido, y me comprometo a evolucionar junto a él. Actualmente estoy ampliando mis conocimientos en React y React Native, sumando nuevas herramientas a mi base en PHP y desarrollo web. Para mí, aprender no es una etapa, es parte constante del oficio.</p>
-                        </div>
-                    </div>
-                    <div className="text-white flex flex-row items-start rounded-md border-slate-500/50 border-[0.1px] bg-gray-700/40 p-5 gap-5">
-                        <div className='bg-blue-900/20 rounded-md border-slate-500/50 border-[0.1px] flex items-center justify-center p-2'>
-                            <MagnifyingGlassIcon className="w-7 h-7 text-blue-bright" />
-                        </div>
-                        <div className='flex flex-col w-full'>
-                            <h1 className='font-bold text-sm'> RESOLUCIÓN DE PROBLEMAS </h1>
-                            <p className='text-gray-400 text-[13px]'>Abordo cada desafío de forma analítica: descompongo problemas complejos en partes manejables, evalúo distintas alternativas de solución, y busco entregar resultados que sean sólidos técnicamente y viables en la práctica.</p>
-                        </div>
-                    </div>
-                    <div className="text-white flex flex-row items-start rounded-md border-slate-500/50 border-[0.1px] bg-gray-700/40 p-5 gap-5">
-                        <div className='bg-blue-900/20 rounded-md border-slate-500/50 border-[0.1px] flex items-center justify-center p-2'>
-                            <UserGroupIcon className="w-7 h-7 text-blue-bright" />
-                        </div>
-                        <div className='flex flex-col w-full'>
-                            <h1 className='font-bold text-sm'> COLABORACIÓN EN EQUIPO </h1>
-                            <p className='text-gray-400 text-[13px]'>El buen software se construye en equipo. Me comunico con claridad, colaboro activamente y me adapto con facilidad a metodologías ágiles como Scrum. Tengo experiencia usando herramientas de gestión colaborativa como Trello, Notion y Jira para organizar tareas y mantener el flujo de trabajo del equipo.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+const qualities = [
+  {
+    icon: CodeBracketIcon,
+    title: 'Pasión por el desarrollo',
+    text: 'El desarrollo de software no es solo mi profesión, es mi oficio. Me motiva convertir ideas abstractas en productos funcionales y escribir código limpio y mantenible que resista el paso del tiempo.',
+  },
+  {
+    icon: MagnifyingGlassIcon,
+    title: 'Resolución de problemas',
+    text: 'Abordo cada desafío de forma analítica: descompongo problemas complejos en partes manejables, evalúo alternativas y busco resultados sólidos técnicamente y viables en la práctica.',
+  },
+  {
+    icon: UserGroupIcon,
+    title: 'Colaboración en equipo',
+    text: 'Me comunico con claridad, colaboro activamente y me adapto a metodologías ágiles como Scrum. Uso Trello, Notion y Jira para organizar tareas y mantener el flujo del equipo.',
+  },
+  {
+    icon: PencilIcon,
+    title: 'Aprendizaje continuo',
+    text: 'Estoy ampliando mis conocimientos en React y React Native, sumando nuevas herramientas a mi base en PHP y desarrollo web. Aprender no es una etapa: es parte constante del oficio.',
+  },
+]
+
+const AboutMe = ({ id }) => {
+  return (
+    <section id={id} className="border-t border-line">
+      <div className="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+        <div className="lg:sticky lg:top-28 lg:self-start">
+          <h2 className="font-display text-sm font-semibold text-accent">Sobre mí</h2>
+          <p className="mt-4 font-display text-3xl leading-tight font-bold tracking-tight text-fg sm:text-4xl">
+            Código pensado para el negocio que lo va a usar.
+          </p>
+          <p className="mt-6 max-w-lg text-base leading-relaxed text-muted sm:text-lg">
+            Soy analista programador especializado en desarrollo web con PHP y bases de datos MySQL, con experiencia
+            práctica en WordPress y proyectos reales de e-commerce. Combino atención al detalle con capacidad de
+            resolución de problemas para transformar requerimientos de negocio en soluciones funcionales y escalables.
+          </p>
         </div>
-    )
+
+        <ul className="divide-y divide-line border-y border-line">
+          {qualities.map(({ icon: Icon, title, text }) => (
+            <li key={title} className="flex gap-5 py-7 sm:gap-6">
+              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-panel-2 text-accent">
+                <Icon className="h-6 w-6" aria-hidden="true" />
+              </span>
+              <div>
+                <h3 className="font-display text-lg font-semibold text-fg">{title}</h3>
+                <p className="mt-2 leading-relaxed text-muted">{text}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )
 }
+
 export default AboutMe
